@@ -25,6 +25,9 @@ public class Ejercicio2 extends Frame implements WindowListener, ActionListener{
 	Label lblPor = new Label("Introduzca el Porcentaje");
 	Label lblRe = new Label("Resultado:");
 	Button btnCal = new Button("Calcular");
+	int cant = 0;
+	double por = 0;
+	double resultado = 0;
 
 	public Ejercicio2() {
 		setLayout(new FlowLayout());
@@ -46,6 +49,7 @@ public class Ejercicio2 extends Frame implements WindowListener, ActionListener{
 		pnl4.add(txtCampo3);
 		add(pnl4);
 		
+		btnCal.addActionListener(this);
 		addWindowListener(this);
 		setSize(340,200);
 		setLocationRelativeTo(null);
@@ -57,7 +61,10 @@ public class Ejercicio2 extends Frame implements WindowListener, ActionListener{
 	}
 
 	public void actionPerformed(ActionEvent arg0) {
-		
+		cant = Integer.parseInt(txtCampo1.getText());
+		por = Integer.parseInt(txtCampo2.getText());
+		resultado = (cant+(cant*(por/100)));
+		txtCampo3.setText(String.valueOf(resultado));
 	}
 	
 	public void windowActivated(WindowEvent arg0) {}
