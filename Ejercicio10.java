@@ -281,5 +281,14 @@ public class Ejercicio10 extends Frame implements WindowListener, ActionListener
 		btn7.setLabel("");
 		btn8.setLabel("");
 		btn9.setLabel("");
+		btn1.setEnabled(true);
+		btn2.setEnabled(true);
+		btn3.setEnabled(true);
+		btn4.setEnabled(true);
+		btn5.setEnabled(true);
+		btn6.setEnabled(true);
+		btn7.setEnabled(true);
+		btn8.setEnabled(true);
+		btn9.setEnabled(true);
 	}
 }
